@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+<!-- Latest compiled and minified CSS -->
+
+</head>
+<body>
+
+	<th:block th:insert="Header.html"></th:block>
+
+	<div class="container-fluid">
+		<div class="card">
+			<div class="card-header text-white text-center bg-primary">
+				<h3>Profile</h3>
+			</div>
+
+			<div class="card-body">
+				<div class="row p-2">
+					<div class="col-4">FirstName</div>
+					<div class="col-6">[[${session.activeUser.fname}]]</div>
+				</div>
+				<div class="row p-2">
+					<div class="col-4">LastName</div>
+					<div class="col-6">[[${session.activeUser.lname}]]</div>
+				</div>
+				<div class="row p-2">
+					<div class="col-4">UserName</div>
+					<div class="col-6">[[${session.activeUser.username}]]</div>
+				</div>
+			</div>
+			<div class="card-footer text-center  bg-warning">@copyright2025</div>
+
+
+		</div>
+	</div>
+
+</body>
+</html>

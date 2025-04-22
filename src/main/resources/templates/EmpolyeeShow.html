@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+    
+</head>
+<body>
+
+    <!--  Optional Header Include -->
+    <th:block th:insert="Header.html"></th:block>
+
+    <div class="container my-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">View Employee Details</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>ID</th>
+                            <td th:text="${employee.id}">1</td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td th:text="${employee.fname}">John</td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td th:text="${employee.lname}">Doe</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td th:text="${employee.email}">john@example.com</td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td th:text="${employee.phone}">9876543210</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
